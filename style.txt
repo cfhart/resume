@@ -1,0 +1,39 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f2f2f2; 
+}
+
+/** section class for the background of the computer
+It will includes the icons class and container 
+*/
+.windowsBackground {
+    
+}
+
+/* div class (container) for icons: deals with their positioning, size and scalability */
+.icon-container {
+    display: grid; /* grid allows the icons to be stacked, and then moved when resolution changed */
+    grid-template-columns: 1fr; /* the column will take up all available space */
+    gap: 10px; /* gap between the columns */
+    margin: 20px; 
+}
+
+/* class for the icons themselves: how they are displayed on the screen*/
+.icon {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+/* scales the icons to all be the same dimensions */
+.icon img {
+    width: 100px; 
+    height: 100px; 
+}
+

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>    
+        
+    </head>
+
+    <body>
+        <section class="windowsBackground">
+            <div class="icon-container">
+                <div class="icon">
+                    <img src="icons/desktopIcons/Internet Explorer 6.png" id="icon1">
+                    <p>About Me</p>
+                </div>
+                <div class="icon">
+                    <img src="icons/desktopIcons/Email.png" id="icon2">
+                    <p>Designs</p>
+                </div>
+                <div class="icon">
+                    <img src="icons/desktopIcons/Recycle Bin (full).png" id="icon3">
+                    <p>Resume</p>
+                </div>
+                <div class="icon">
+                    <img src="icons/desktopIcons/Folder Closed.png" id="icon4">
+                    <p>Relevant Courses</p>
+                </div>
+                <div class="icon">
+                    <img src="icons/desktopIcons/My Computer.png" id="icon5">
+                    <p>Projects</p>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>About Me</h2>
+                    <div class="modal-controls">
+                        <span class="minimize" title="Minimize">
+                            <img src="icons/desktopIcons/Minimize.png" alt="Minimize">
+                        </span>
+                        <span class="full-screen" title="Full Screen">
+                            <img src="icons/desktopIcons/Maximize.png" alt="Full Screen">
+                        </span>
+                        <span class="close" title="Close">
+                            <img src="icons/desktopIcons/Exit.png" alt="Close">
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h1>Hi</h1>
+                    <p>My name is Cassie Hart. I am a Computer Science major with a Graphic Communicatiosn minor at NCSU. </p>
+                    <h1>Fun facts:</h1>
+                    <p>I like to read, bake, and play video games in my free time.</p>
+                    <p>I have a twin sister.</p>
+                    <p>I like to do arts and crafts (mostly paper cards)</p>
+
+                    <h1>About this website</h1>
+                    <p> I decided to create this website to showcase what I couldn't fit in my resume. And as a CS major, whats better than a website?</p>
+                    <p>This is an ongoing project, so there might be some small parts that don't behave as they should.</p>
+                    <p>What im currently working on: adding an actual resume page, adding the rest of the projects + links. But mainly: populating the projects page.</p>
+                    <p>If something messes up on the website, refresh.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Designs</h2>
+                    <div class="modal-controls">
+                        <span class="minimize" title="Minimize">
+                            <img src="icons/desktopIcons/Minimize.png" alt="Minimize">
+                        </span>
+                        <span class="full-screen" title="Full Screen">
+                            <img src="icons/desktopIcons/Maximize.png" alt="Full Screen">
+                        </span>
+                        <span class="close" title="Close">
+                            <img src="icons/desktopIcons/Exit.png" alt="Close">
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <h1>Projects</h1>
+                    <ul>
+                        <li><a href="#miniProjects">MiniProjects</a></li>
+                        <li>Farmwood Figs</li>
+                        <li>RM Fence LLC</li>
+                        <li>EatSafe</li>
+                    </ul>
+                    <div class="miniProjects">
+                        <h1>Mini Projects</h1><br>
+                        <h2>Mini Project 1: Static Websites</h2>
+                        <div class="mp1">
+                            <div class="project">
+                                <div class="task">
+                                    <p><b>Task 1:</b> Create a static landing page for a hypothetical (but professional) newspaper's website with a focus on layout and composition</p>
+                                    <p><b>Requirements:</b></p>
+                                    <ul class="mp">
+                                        <li>No javascript</li>
+                                        <li>Resources must use relative paths</li>
+                                        <li>Must use semantic tags</li>
+                                    </ul>
+                                    <p><b>Design:</b> The design was composed of two parts: the body of the newspaper and the footer.</p>
+                                </div>
+                                <div class="images">
+                                    <p><b>Body of newspaper:</b></p>
+                                    <img src="./media/mp1/part1/newspaperBody.jpg">
+                                    <p><b>Footer of newspaper:</b></p>
+                                    <img src="./media/mp1/part1/newspaperThree.jpg">
+                                </div>
+                                <div class="video">
+                                    <p><b>Video:</b></p>
+                                    <video width="100%" height="auto" controls>
+                                        <source src="./media/mp1/part1/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="notes">
+                                    <p><b>Challenges:</b> The hardest part of this project were the borders for the articles. They are a mix of left, right, top and bottom borders.</p>
+                                    <p><b>Feedback:</b> Your newspaper site looks realistic and modern. Good job on that. Also, you did a good job making use of semantic tags. They give a meaningful structure or description to your HTML. Using appropriate elements is crucial as it helps developers understand your structure. More importantly, it’s used by accessibility devices such as screen readers to understand or navigate your site better.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="project">
+                                <div class="task">
+                                    <p><b>Task 2:</b> Given dashboard.html with no css sheet, style it</p>
+                                    <p><b>Requirements:</b> No css frameworks or libraries, no javascript, can only modify the html to add id or class attriutes</p>
+                                    <p><b>Design:</b></p>
+                                </div>
+                                <div class="images">
+                                    <p><b>Top of dashboard</b></p>
+                                    <img src="./media/mp1/part2/dashboardOne.jpg">
+                                    <p><b>Bottom of dashboard</b></p>
+                                    <img src="./media/mp1/part2/dashboardTwo.jpg">
+                                </div>
+                                <div class="video">
+                                    <p><b>Video:</b></p>
+                                    <video width="100%" height="auto" controls>
+                                        <source src="./media/mp1/part2/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="notes" id="mp1p2">
+                                    <p><b>Special features: on hover</b></p>
+                                    <img src="./media/mp1/part2/Screenshot 2024-11-25 164827.jpg">
+                                    <p>When a list item from the sidebar is hovered, it changes white so that user has a visual way of knowing its hovered. Some options also have a dropdown.</p>
+                                    <img src="./media/mp1/part2/Screenshot 2024-11-25 164842.jpg">
+                                    <p>The ribbon for the user profile all has dropdowns. The two styles are shown above. Any all all buttons in the dashboard will also turn dark grey when hovered.</p>
+                                    <img src="./media/mp1/part2/buttons.jpg" id="buttonHover">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="mp2">
+                            <h2>Mini Project 2: Basic Calculator</h2>
+                            <div class="project">
+                                <div class="task">
+                                    <p><b>Task 1:</b> Develop a web-based calculator with computation history</p>
+                                    <p><b>Requirements:</b> </p>
+                                    <ul class="mp">
+                                        <li>Single HTML file (index.html)</li>
+                                        <li>External CSS and JavaScript files</li>
+                                        <li>No inline or embedded CSS/JS</li>
+                                        <li>No external libraries</li>
+                                        <li>No use of eval()</li>
+                                    </ul>
+                                    <p><b>Functionality:</b></p>
+                                    <ul class="mp">
+                                        <li>Basic arithmetic operations (+, -, ×, ÷)</li>
+                                        <li>Accept input via buttons or typing (numbers and decimals only)</li>
+                                        <li>Record computation history when:</li>
+                                        <ul class="mpLow">
+                                            <li>Pressing the "=" button</li>
+                                            <li>Pressing an operation button during a longer calculation</li>
+                                        </ul>
+                                        <li>Clickable history list to reuse previous results in new calculations</li>
+                                        <li>"C" button to reset calculator state and clear errors</li>
+                                        <li>"Clear History" button to delete all history entries</li>
+                                        <li>Display "Error" for invalid operations (e.g., divide by zero); user must reset with "C"</li>
+                                    </ul>
+                                    <p><b>Design:</b></p>
+                                    <ul class="mp">
+                                        <li>Polished layout using CSS (flexbox or grid; no tables)</li>
+                                        <li>Restrict typed input to valid characters (numbers, decimals, and operations only)</li>
+                                        <li>Handle all basic calculations as per provided test cases</li>
+                                    </ul>
+                                    <p><b>A few Cases:</b></p>
+                                    <ul class="mp">
+                                        <li>111 + 000 = 111</li>
+                                        <li>0.5 + 0.6 = 1.1</li>
+                                        <li>111 + - 111 = 0</li>
+                                        <li>2 × 13 = 26</li>
+                                        <li>30 ÷ 10 = 3</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="images" id="imagesMP2">
+                                    <div class="image">
+                                        <p><b>Calculator Design:</b></p>
+                                        <img src="./media/mp2//calculator.jpg">
+                                    </div>
+                                    <div class="image">
+                                        <p><b>History Design:</b></p>
+                                        <img src="./media/mp2/history.jpg">
+                                    </div>
+                                </div>
+                                <div class="video">
+                                    <p><b>Video:</b></p>
+                                    <video width="100%" height="auto" controls>
+                                        <source src="./media/mp2/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="notes">
+                                    <p><b>Challenges:</b> I didn't have a lot of trouble with this project. However, I did spend the most time on the design. I had an vision of how I wanted it to look, and was 1000% going to get it to look like it.</p>
+                                    <p><b>Feedback:</b> The UI design is impressive—it looks like a real calculator! All test cases produce the expected results. There's one minor issue: when pressing Enter on the keyboard to calculate a result, although the = button displays a click effect, the output is consistently 0. Feel free to address this and submit a feedback request. I believe it will be a quick fix.</p>
+                                    <p><b>Revisions:</b> Fixed the case where = pressed only showed a 0.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="mp3">
+                            <h2>Mini Project 3: Pay Your Friends</h2>
+
+                            <div class="project">
+                                <div class="task">
+                                    <p><b>Task 2:</b> Create a simple payment app ("Pay Your Friends")</p>
+                                    <p><b>Requirements:</b></p>
+                                    <ul class="mp">
+                                        <li>Only Express and Multer dependencies allowed</li>
+                                        <li>Static assets served from a designated folder</li>
+                                        <li>No HTML event attributes</li>
+                                        <li>Use JavaScript for event handling</li>
+                                    </ul>
+                                    
+                                    <p><b>Front-end (form.html):</b></p>
+                                        <p>Develop an HTML form styled with CSS and enhanced with JavaScript.</p>
+                                        <p><b>Features:</b></p>
+                                        <ul class="mp">
+                                            <li>File preview for image uploads (JavaScript event listeners).</li>
+                                        </ul>
+                                        <p><b>Form validation rules:</b></p>
+                                            <ul class="mp">
+                                                <li><b>Sender Details:</b> First/last names and a valid image (&lt;200KB) required.</li>
+                                                <li><b>Recipient Details:</b> First/last names, message (&ge;10 characters), optional email/phone (required based on notification setting).</li>
+                                                <li><b>Payment Details:</b> All fields mandatory (terms must be accepted). </li>
+                                                <li><b>Validate:</b></li>
+                                                <ul class="mpLow">
+                                                    <li>Card number format: XXXX-XXXX-XXXX-XXXX</li>
+                                                    <li>Card not expired</li>
+                                                    <li>CCV: 3 or 4 digits (hidden from display)</li>
+                                                    <li>Amount: numerical, including decimals</li>
+                                                </ul>
+                                
+                                    <p><b>Additional Pages:</b></p>
+                                    <ul class="mpLow">
+                                        <li><b>.html:</b> Display confirmation of payment</li>
+                                        <li><b>error.html:</b> Show error messages for invalid operations.</li>
+                                    </ul>
+                                
+                                    <p><b>Back-end (Express Server):</b></p>
+                                    <ul>
+                                        <li><b>Routes:</b></li>
+                                        <ul>
+                                            <li>GET /: Serve form.html.</li>
+                                            <li>POST /send: Process form data.</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                
+                                <div class="images">
+                                    <div class="image">
+                                        <p><b>Design:</b></p>
+                                        <img src="./media/mp3/payment.jpg">
+                                    </div>
+                                    <p><b>Error page:</b></p>
+                                    <div class="image">
+                                        <img src="./media/mp3/error.jpg">
+                                    </div>
+                                    <p><b>Success page:</b></p>
+                                    <div class="image">
+                                        <img src="./media/mp3/success.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="video">
+                                    <p><b>Video:</b></p>
+                                    <video width="100%" height="auto" controls>
+                                        <source src="./media/mp3/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="notes">
+                                    <li><b>Validation:</b> Ensure data integrity on the server side.</li>
+                                    <li><b>Fraud Prevention:</b> Block payments to "Stuart Dent" or "Stu Dent" (display error page if detected).</li>
+                                    <li>Store uploaded images in an uploads/ folder.</li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp4">
+                            <h2>Mini Project 4: Howler</h2>
+                            <div class="project">
+                                <div class="task">
+                                    <p><b>Project Name:</b> Mini Project 4: Howler</p>
+                                    <p><b>Description:</b> Create a client-side rendered social network app that allows users to post "howls," view other users' howls, and manage follows/unfollows.</p>
+                                
+                                    <p><b>Features:</b></p>
+                                    <ul class="mp">
+                                        <li>Users can post text entries ("howls") to share thoughts.</li>
+                                        <li>View howls from followed users on the main page, sorted in reverse chronological order.</li>
+                                        <li>Visit user profiles to view their howls and manage follow/unfollow status.</li>
+                                        <li>Basic authentication to identify the current user.</li>
+                                    </ul>
+                                
+                                    <p><b>Data:</b></p>
+                                    <ul class="mp">
+                                        <li><b>Users:</b> Each user has a unique ID, username, first and last name, and an avatar URL.</li>
+                                        <li><b>Howls:</b> Each howl includes an ID, user ID, timestamp, and text content.</li>
+                                        <li><b>Follows:</b> Tracks which users are followed by others.</li>
+                                    </ul>
+                                
+                                    <p><b>Backend Requirements:</b></p>
+                                    <ul class="mp">
+                                        <li>Design and implement a REST API using Express.</li>
+                                        <li>API routes must be mounted under <code>/api</code>.</li>
+                                        <li>Data is stored in memory and loaded from provided JSON files.</li>
+                                        <li>Endpoints include:
+                                            <ul class="mpLow">
+                                                <li>Authenticating a user.</li>
+                                                <li>Fetching user data and howls.</li>
+                                                <li>Posting howls.</li>
+                                                <li>Following/unfollowing users.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Use <code>express.Router()</code> for modular routes.</li>
+                                    </ul>
+                                
+                                    <p><b>Frontend Requirements:</b></p>
+                                    <ul class="mp">
+                                        <li>Responsive UI using Bootstrap for styling.</li>
+                                        <li>Dynamic rendering of data fetched from the REST API.</li>
+                                        <li>Frontend includes:
+                                            <ul class="mpLow">
+                                                <li>Login Page: Simple login mechanism to identify the user.</li>
+                                                <li>Main Page: Displays howls from the logged-in user and followed users.</li>
+                                                <li>User Profile Page: Displays user details, howls, and follow/unfollow functionality.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+
+                                <div class="images">
+
+                                </div>
+                                <div class="video">
+                                    <p><b>Video:</b></p>
+                                    <video width="100%" height="auto" controls>
+                                        <source src="./media/mp4/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="notes">
+                                    <p><b>Feedback:</b> Your codebase has a nice skeleton. And I notice you have already filled in most of the content. Keep working on it and looking forward to the updates.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp5">
+                            <h2>Mini Project 5: Howler</h2>
+                            <div class="project">
+                                <div class="task">
+                                    
+                                </div>
+                                
+
+                                <div class="images">
+
+                                </div>
+
+                                <div class="video">
+                                    <p><b>Video:</b></p>
+                                    <video width="100%" height="auto" controls>
+                                        <source src="./media/mp5/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="notes">
+                                    <p><b>Feedback:</b> 
+                                        Your mini-project 5 is currently not running on your VM.This submission needs to meet the main requirement for this mini-project: implementing authentication without using the JSON web token library. Hardcoding secret keys in the source code is a major security risk, as it makes them easily accessible to anyone who can view the code, leading to potential unauthorized access and data breaches. It's much safer to use environment variables or secret management systems for handling keys. You should move the secret key into the .env file.
+                                    </p>
+                                    <p><b>Revisions:</b> ran in vm with -d flag to get it running on VM. Added secret key to the env file and called it in middleware with process.env.API_SECRET. Changed from jwt.verify and jwt.sign to implementing my own JWT algorithms with crypto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Resume</h2>
+                    <div class="modal-controls">
+                        <span class="minimize" title="Minimize">
+                            <img src="icons/desktopIcons/Minimize.png" alt="Minimize">
+                        </span>
+                        <span class="full-screen" title="Full Screen">
+                            <img src="icons/desktopIcons/Maximize.png" alt="Full Screen">
+                        </span>
+                        <span class="close" title="Close">
+                            <img src="icons/desktopIcons/Exit.png" alt="Close">
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <a href="./media/resume.pdf" download>Open Resume</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Relevant Courses</h2>
+                    <div class="modal-controls">
+                        <span class="minimize" title="Minimize">
+                            <img src="icons/desktopIcons/Minimize.png" alt="Minimize">
+                        </span>
+                        <span class="full-screen" title="Full Screen">
+                            <img src="icons/desktopIcons/Maximize.png" alt="Full Screen">
+                        </span>
+                        <span class="close" title="Close">
+                            <img src="icons/desktopIcons/Exit.png" alt="Close">
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Content for Relevant Courses...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Projects</h2>
+                    <div class="modal-controls">
+                        <span class="minimize" title="Minimize">
+                            <img src="icons/desktopIcons/Minimize.png" alt="Minimize">
+                        </span>
+                        <span class="full-screen" title="Full Screen">
+                            <img src="icons/desktopIcons/Maximize.png" alt="Full Screen">
+                        </span>
+                        <span class="close" title="Close">
+                            <img src="icons/desktopIcons/Exit.png" alt="Close">
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Content for Projects...</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="taskbar">
+                <div class="start">
+                    <img src="icons/desktopIcons/start.png" alt="Start">
+                </div>
+
+                <div id="footer-tabs"></div>
+                <div class="clock" id="clock"></div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+    
+</html>

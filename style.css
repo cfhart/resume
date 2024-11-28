@@ -1,0 +1,295 @@
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#footer-tabs {
+    display: flex;
+    padding: 10px;
+}
+
+.footer-tab {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    background-color: rgb(60, 129, 243);
+    border-radius: 5px;
+    /* pressed: rgb(30, 82, 183); */
+}
+
+.footer-tab img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+body {
+    background: #f2f2f2; 
+}
+
+/** section class for the background of the computer
+It will includes the icons class and container 
+*/
+.windowsBackground {
+    height: 100vh; /* how much space the image takes up */
+    padding: 20px; /* offset the icons from touchig the side */
+    background-image: url('icons/desktopIcons/bliss.jpg');
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+/* div class (container) for icons: deals with their positioning, size and scalability */
+.icon-container {
+    display: grid; /* grid allows the icons to be stacked, and then moved when resolution changed */
+    grid-template-columns: 1fr; /* the column will take up all available space */
+    gap: 30px; /* gap between the columns */
+    max-width: 50px; /* Limit the width of the container */
+
+}
+
+/* class for the icons themselves: how they are displayed on the screen*/
+.icon {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+/* scales the icons to all be the same dimensions */
+.icon img {
+    width: 50px; 
+    height: auto; 
+    padding-bottom: 10px; 
+}
+
+/* text formatting for home screen icons */
+.icon p {
+    text-align: center;
+    color: white; 
+    font-size: 1rem; 
+}
+
+/* Effect for when the icon is pressed */
+.icon.active p {
+    background-color: #0b61ff; 
+    color: white; 
+}
+
+/* Apply filter to give a blueish tint when the icon is clicked/pressed */
+.icon.active img {
+    filter: hue-rotate(360deg) saturate(2) brightness(0.6);
+}
+
+
+/* task bar code*/
+
+.taskbar {
+    display: flex; 
+    align-items: center;
+}
+
+.taskbarIcon {
+    display: flex;
+    flex-direction: row; 
+    align-items: left;
+    cursor: pointer; /* Add cursor pointer for hover effect */
+}
+
+/* Effect for when the icon is pressed */
+.start:active img {
+    color: white; 
+    filter: hue-rotate(360deg) saturate(2) brightness(0.6);
+}
+
+.taskbarIcon img {
+    height: 40px; 
+    width: auto; 
+}
+
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgb(31, 47, 134) 0px, rgb(49, 101, 196) 3%, rgb(54, 130, 229) 6%, rgb(68, 144, 230) 10%, rgb(56, 131, 229) 12%, rgb(43, 113, 224) 15%, rgb(38, 99, 218) 18%, rgb(35, 91, 214) 20%, rgb(34, 88, 213) 23%, rgb(33, 87, 214) 38%, rgb(36, 93, 219) 54%, rgb(37, 98, 223) 86%, rgb(36, 95, 220) 89%, rgb(33, 88, 212) 92%, rgb(29, 78, 192) 95%, rgb(25, 65, 165) 98%);
+    color: white;
+    text-align: center;
+}
+
+.start img {
+    height: 40px;
+    width: auto; 
+    vertical-align: bottom; /* Ensure the image is aligned to the bottom */
+}
+
+.clock {
+    position: absolute; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px; 
+    padding-left: 10px; 
+    right: 0px; 
+    background: linear-gradient(rgb(12, 89, 185) 1%, rgb(19, 158, 233) 6%, rgb(24, 181, 242) 10%, rgb(19, 155, 235) 14%, rgb(18, 144, 232) 19%, rgb(13, 141, 234) 63%, rgb(13, 159, 241) 81%, rgb(15, 158, 237) 88%, rgb(17, 155, 233) 91%, rgb(19, 146, 226) 94%, rgb(19, 126, 215) 97%, rgb(9, 91, 201) 100%);
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 380px;
+    top: 80px;
+    width: 60%; /* Full width */
+    height: 500px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: transparent; /* Make background transparent */
+    pointer-events: none; /* Make background unclickable */
+    transition: width 0.3s, height 0.3s; /* Smooth transition when toggling full-screen */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Background color of the modal */
+    pointer-events: all; /* Make modal content clickable */
+}
+
+
+/* Style for the individual control buttons */
+.modal-controls span {
+    cursor: pointer;
+}
+
+.modal.fixed {
+    position: fixed; /* Use fixed positioning */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full screen width */ height: 100vh; /* Full screen height */ z-index: 1000;
+}
+
+
+.close {
+    color: #000; /* Close button color */
+    float: right; /* Align to the right */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.modal-header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Space between title and controls */
+    background: linear-gradient(rgb(0, 88, 238) 0%, rgb(53, 147, 255) 4%, rgb(40, 142, 255) 6%, rgb(18, 125, 255) 8%, rgb(3, 111, 252) 10%, rgb(2, 98, 238) 14%, rgb(0, 87, 229) 20%, rgb(0, 84, 227) 24%, rgb(0, 85, 235) 56%, rgb(0, 91, 245) 66%, rgb(2, 106, 254) 76%, rgb(0, 98, 239) 86%, rgb(0, 82, 214) 92%, rgb(0, 64, 171) 94%, rgb(0, 48, 146) 100%); /* Header background color */
+    color: white; /* Header text color */
+}
+
+/* Align buttons to the right using flex-end */
+.modal-controls {
+    display: flex; /* Layout buttons in a row */
+    align-items: center; /* Center the buttons vertically */
+    justify-content: flex-end; /* Push buttons to the right */
+    margin-left: auto; /* Push the controls to the far right */
+}
+
+.modal-body {
+    padding: 20px; /* Padding inside the modal body */
+}
+
+.modal-footer {
+    padding: 10px 20px;
+    background-color: #f1f1f1; /* Footer background color */
+    color: black; /* Footer text color */
+    border-top: 1px solid #ddd; /* Border above the footer */
+    border-radius: 0 0 10px 10px; /* Rounded corners for the footer */
+    text-align: right; /* Align the footer content to the right */
+}
+
+.modal-controls img {
+    height: 25px; 
+    width: auto; 
+}
+
+.modal-content p {
+    padding: 10px 0px 10px 0px;
+}
+
+ul:not(ul.mp, ul.mpLow) {
+    padding: 20px; 
+}
+
+ul.mp {
+    padding: 0px 20px 10px 20px;
+}
+
+ul.mpLow {
+        padding: 10px 20px 10px 20px;
+     
+}
+
+/** formatting modal for designs*/
+.miniProjects .images img {
+    width: 100%;
+    height: auto; 
+}
+
+#mp1p2 img {
+    width: auto;
+    height: 250px; 
+}
+
+img#buttonHover  {
+    height: 75px; 
+}
+
+#imagesMP2 img {
+    height: 380px; 
+    width: auto;
+}
+
+#imagesMP2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+}
+
+/* First Breakpoint */
+@media (max-height: 700px) {
+    .icon-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+}
+
+/* Second Breakpoint */
+@media (max-height: 500px) {
+    .icon-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .icon:nth-child(3) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .icon:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+}
+
+/* Third Breakpoint */
+@media (max-height: 300px) {
+    .icon-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: none;
+    }
+
+    .icon {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
