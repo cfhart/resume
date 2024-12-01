@@ -2,21 +2,21 @@
 //clock js 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // function updateClock() {
-    //     const clockElement = document.getElementById('clock');
-    //     const now = new Date();
-    //     let hours = now.getHours();
-    //     const minutes = now.getMinutes();
-    //     const ampm = hours >= 12 ? 'PM' : 'AM';
-    //     hours = hours % 12;
-    //     hours = hours ? hours : 12; // The hour '0' should be '12'
-    //     const minutesStr = minutes < 10 ? '0' + minutes : minutes;
-    //     const timeString = hours + ':' + minutesStr + ' ' + ampm;
-    //     clockElement.textContent = timeString;
-    // }
+    function updateClock() {
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = now.getMinutes();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // The hour '0' should be '12'
+        const minutesStr = minutes < 10 ? '0' + minutes : minutes;
+        const timeString = hours + ':' + minutesStr + ' ' + ampm;
+        clockElement.textContent = timeString;
+    }
     
-    // setInterval(updateClock, 1000); // Update the clock every second
-    // updateClock(); // Initial call to set the clock immediately
+    setInterval(updateClock, 1000); // Update the clock every second
+    updateClock(); // Initial call to set the clock immediately
     const icons = document.querySelectorAll('.icon');
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close');
