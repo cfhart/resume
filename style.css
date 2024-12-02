@@ -255,6 +255,38 @@ img#buttonHover  {
     flex-wrap: wrap; 
 }
 
+.eatSafe .images {
+    display: flex; 
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.rmfence .images img {
+    width: 100%; 
+    height: auto; 
+}
+
+.mobile {
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 40px; 
+}
+
+.mobile img {
+    border-radius: 25px; 
+    border: 1px solid grey;
+
+}
+
+.eatSafe img {
+    width: 300px; 
+    height: auto;
+    border-radius: 25px;
+    border: 1px solid grey; 
+}
+
 /* First Breakpoint */
 @media (max-height: 700px) {
     .icon-container {

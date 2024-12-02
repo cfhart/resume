@@ -86,12 +86,229 @@
                 <div class="modal-body">
                     <h1>TBD</h1>
                     <ul>
+                        <li><a href="#eatSafe">EatSafe</a></li>
+                        <li><a href="#rmfence">RM Fence LLC</a></li>
                         <li><a href="#miniProjects">MiniProjects</a></li>
+                        <ul class="mpLow">
+                            <li><a href="#miniProjects">Mini Project 1: Static Websites</a></li>
+                            <li><a href="#miniProjects">Mini Project 2: Basic Calculator</a></li>
+                            <li><a href="#miniProjects">Mini Project 3: Pay Your Friends</a></li>
+                            <li><a href="#miniProjects">Mini Project 4: Howler</a></li>
+                            <li><a href="#miniProjects">Mini Project 5: Howler</a></li>
+                        </ul>
                         <li>Farmwood Figs</li>
-                        <li>RM Fence LLC</li>
-                        <li><a href="https://csc342-508.csc.ncsu.edu/">EatSafe</a></li>
                     </ul>
-                    <div class="miniProjects">
+                    <div class="eatSafe" id="eatSafe">
+                        <h1>EatSafe Progressive Web Application (PWA)</h1><br>
+                        <div class="project">
+                            <div class="task">
+                                <h3>Description</h3>
+                                <p>EatSafe is a Progressive Web Application designed to help users find restaurants in their area that accommodate various food allergies, dietary preferences, and restrictions. The app aims to provide a seamless experience for users seeking safe dining options that align with their specific needs.</p>
+
+                                <h3>Main Features</h3>
+
+                                <h4>Home Page</h4>
+                                <ul>
+                                    <li>Displays a picture and logo</li>
+                                    <li>Provides options to log in or sign up</li>
+                                </ul>
+
+                                <h4>Search Page</h4>
+                                <ul>
+                                    <li>Allows users to find restaurants based on location, allergens, and dietary preferences</li>
+                                    <li>Includes filtering and sorting options for restaurants</li>
+                                    <li>Has a regular search bar for users to search by restaurant name</li>
+                                </ul>
+
+                                <h4>Profile Page</h4>
+                                <ul>
+                                    <li>Displays user's first name, last name, and username</li>
+                                    <li>Allows users to update their dietary preferences, allergies, and location</li>
+                                    <li>Includes options to update the user's avatar and view saved favorite restaurants</li>
+                                </ul>
+
+                                <h4>User Data & Authentication</h4>
+                                <ul>
+                                    <li>User passwords must include a symbol and be at least 8 characters long upon creation</li>
+                                    <li>Password data is stored as hashed and salted for security</li>
+                                    <li>Users can log in, log out, and sign up</li>
+                                    <li>Session tokens are used for authentication and authorization</li>
+                                    <li>If session expires or authentication fails, the user cannot access profile data</li>
+                                </ul>
+
+                                <h4>Restaurant Data</h4>
+                                <ul>
+                                    <li>Each restaurant has the following attributes: name, location, rating, allergens, diets, and phone number</li>
+                                    <li>Restaurants can be filtered by allergens (e.g., milk, peanuts), dietary preferences (e.g., kosher, vegan), and location</li>
+                                    <li>Each restaurant can be added to or removed from the user's favorites</li>
+                                </ul>
+
+                                <h4>PWA Capabilities</h4>
+                                <ul>
+                                    <li>The app works offline, caching GET requests to ensure users can still access previously loaded data</li>
+                                    <li>New restaurants or updated data will not be available offline until accessed at least once</li>
+                                    <li>Login and user creation are not available offline, but users can still search for cached restaurants</li>
+                                </ul>
+                      
+                                <h4>Frontend Development</h4>
+                                <ul>
+                                    <li>Designed the HTML and CSS for the home, login, sign-up, and search/filter pages.</li>
+                                    <li>Implemented sorting and filtering functionality using JavaScript.</li>
+                                    <li>Created a responsive and accessible user interface.</li>
+                                </ul>
+
+                                <h4>Backend Development</h4>
+                                <ul>
+                                    <li>Developed REST API endpoints to handle user authentication and data retrieval.</li>
+                                    <li>Set up backend routes for managing user accounts and restaurant data.</li>
+                                    <li>Integrated a relational database (MariaDB) to store user information and restaurant details.</li>
+                                </ul>
+
+                                <h3>Future Enhancements</h3>
+                                <ul>
+                                    <li>Implement push notifications for restaurant updates.</li>
+                                    <li>Enable offline data input and synchronization when back online.</li>
+                                    <li>Integrate persistent storage using IndexedDB for improved offline support.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="images">
+                                <div class="image">
+                                    <p><b>Home:</b></p>
+                                    <img src="./media/eatsafe/home.jpg">
+                                </div>
+                                <div class="image">
+                                    <p><b>Search:</b></p>
+                                    <img src="./media/eatsafe/main.jpg">
+                                </div>
+                                <div class="image">
+                                    <p><b>Profile:</b></p>
+                                    <img src="./media/eatsafe/profileOne.jpg">
+                                </div>
+                                <div class="image">
+                                    <p><b>Log in:</b></p>
+                                    <img src="./media/eatsafe/login.jpg">
+                                </div>
+                                <div class="image">
+                                    <p><b>Sign up:</b></p>
+                                    <img src="./media/eatsafe/signup.jpg">
+                                </div>
+                                <div class="image">
+                                    <p><b>Restaurant card:</b></p>
+                                    <img src="./media/eatsafe/card.jpg">
+                                </div>
+                                <div class="image">
+                                    <p><b>Nav Menu:</b></p>
+                                    <img src="./media/eatsafe/profileOne.jpg">
+                                </div>
+                            </div>
+
+                            <div class="video">
+                                <p><b>Video:</b></p>
+                                <video width="100%" height="auto" controls>
+                                    <source src="./media/eatsafe/demo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="notes">
+                                <p><b>Future Improvements:</b> 
+                                    Currently, a user can only view their favorite restaurants, they cannot sort or filter them. I would resolve this by allowing each search/filter function to take in a list of restaurants to sort/filter, instead of using all. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rmfence" id="rmfence">
+                        <div class="project">
+                            <div class="task">
+                                <h3>Summer Project</h3>
+
+                                <h4>Fencing Company Website</h4>
+                                <p>Developed a website for a local fencing company to showcase their installations and fences. The website highlights the company's services, displaying a gallery of completed projects, client testimonials, and details about the types of fences they offer. The goal was to create an informative and visually appealing site to attract new customers.</p>
+
+                                <h4>Main Features</h4>
+                                <h5>Homepage</h5>
+                                <ul>
+                                    <li>Introduces the company with a brief overview of services.</li>
+                                    <li>Displays a gallery of fence installations with images and descriptions.</li>
+                                    <li>Provides contact information and links to social media accounts.</li>
+                                </ul>
+
+                                <h5>Gallery Page</h5>
+                                <ul>
+                                    <li>Shows high-quality images of various fence installations completed by the company.</li>
+                                    <li>Allows visitors to view different types of fences (e.g., wooden, iron, vinyl). </li>
+                                </ul>
+
+                                <h5>Contact Page</h5>
+                                <ul>
+                                    <li>Includes a form for customers to request quotes or ask for more information.</li>
+                                    <li>Displays the company's phone number, email, and address for easy communication.</li>
+                                </ul>
+
+                                <h4>Technologies Used</h4>
+                                <ul>
+                                    <li>HTML, CSS, and JavaScript for front-end development.</li>
+                                    <li>Responsive design for mobile and desktop compatibility.</li>
+                                    <li>Used a simple content management approach for easy updates to gallery and contact information.</li>
+                                </ul>
+
+                                <h4>Challenges & Solutions</h4>
+                                <ul>
+                                    <li>Ensuring mobile responsiveness across different devices was a priority, requiring adjustments to layout and image sizes.</li>
+                                    <li>Provided clear instructions for the client to update gallery images, making future maintenance simple for non-technical users.</li>
+                                </ul>
+
+                            </div>
+                            <div class="images">
+                                <div class="image">
+                                    <p><b>Home:</b></p>
+                                    <img src="./media/rmfence/home.jpg">
+                                </div>
+                                <div class="image">
+                                    <p><b>Example of fence section:</b></p>
+                                    <img src="./media/rmfence/aluminum.jpg" style="width: 700px; height: auto;">
+                                </div>
+                                
+                                <div class="image">
+                                    <p><b>Contact:</b></p>
+                                    <img src="./media/rmfence/contact.jpg" style="width: 700px; height: auto;">
+                                </div>
+                                <div class="image">
+                                    <p><b>Portfolio:</b></p>
+                                    <img src="./media/rmfence/portfolio.jpg" style="width: 700px; height: auto;">
+                                </div>
+                                <div class="image">
+                                    <p><b>Services:</b></p>
+                                    <img src="./media/rmfence/services.jpg" style="width: 700px; height: auto;">
+                                </div>
+                                <div class="image">
+                                    <p><b>Footer:</b></p>
+                                    <img src="./media/rmfence/footer.jpg" style="width: 700px; height: auto;">
+                                </div>
+                                <div class="mobile">
+                                    <div class="image">
+                                        <p><b>Form:</b></p>
+                                        <img src="./media/rmfence/form.jpg" style="width: 300px; height: auto;">
+                                    </div>
+                                    <div class="image">
+                                        <p><b>Mobile view:</b></p>
+                                        <img src="./media/rmfence/mobile.jpg" style="width: 300px; height: auto;">
+                                    </div>
+                                    <div class="image">
+                                        <p><b>Mobile nav menu:</b></p>
+                                        <img src="./media/rmfence/nav.jpg" style="width: 300px; height: auto;">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="video">
+                                <p><b>Video:</b></p>
+                                <video width="100%" height="auto" controls>
+                                    <source src="./media/rmfence/demo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="miniProjects" id="miniProjects">
                         <h1>Mini Projects</h1><br>
                         <h2>Mini Project 1: Static Websites</h2>
                         <div class="mp1">
@@ -389,6 +606,8 @@
                             </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>
