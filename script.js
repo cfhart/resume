@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
         clockElement.textContent = timeString;
     }
     
-    setInterval(updateClock, 1000); // Update the clock every second
-    updateClock(); // Initial call to set the clock immediately
+    // setInterval(updateClock, 1000); // Update the clock every second
+    // updateClock(); // Initial call to set the clock immediately
     const icons = document.querySelectorAll('.icon');
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close');
@@ -38,7 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutMeIcon.querySelector('img').style.filter = 'hue-rotate(360deg) saturate(2) brightness(0.6)';
     activeIcon = aboutMeIcon;
     currentIcon = aboutMeIcon;
-    activeModal = modals[0]; bringToFront(activeModal); activeModal.style.display = "block"; 
+    activeModal = modals[0]; 
+    bringToFront(activeModal);
+    activeModal.style.display = "block"; 
+
     if (!isTabOpen(0)) {
         addFooterTab(aboutMeIcon, 0);
     } 
@@ -119,17 +122,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const content = modal.querySelector('.modal-content')
 
             if(fullScreenTabs.has(index)) {
-                //if currently full screened
-                modal.classList.remove('fixed');
+                modal.classList.remove('fullscreen');
                 modal.style.width = '60%';
-                fullScreenTabs.delete(index);
+                modal.style.height = 'auto';
+                modal.style.top = '50%';
+                modal.style.left = '50%';
+                modal.style.transform = 'translate(-50%, -50%)';
+                fullScreenTabs.remove(index); 
             }
             else {
-                const parentHeight = modal.parentElement.offsetHeight; 
-                modal.style.height = (parentHeight - 40) + "px";
-                modal.classList.add('fixed');
+                modal.classList.add('fullscreen');
                 modal.style.width = '100%';
-                fullScreenTabs.add(index);
+                modal.style.height = '100%';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.transform = 'none';
+                fullScreenTabs.add(index); 
             }
         });
     });
@@ -238,7 +246,13 @@ document.addEventListener('DOMContentLoaded', function() {
             offsetX = e.clientX - modal.getBoundingClientRect().left;
             offsetY = e.clientY - modal.getBoundingClientRect().top;
 
-            const modalIndex = Array.from(modals).indexOf(modal); if (fullScreenTabs.has(modalIndex)) { modal.style.width = '60%'; modal.classList.remove('fixed'); ullScreenTabs.delete(modalIndex); }
+            const modalIndex = Array.from(modals).indexOf(modal); 
+            if (fullScreenTabs.has(modalIndex)) { 
+                modal.style.width = '60%';
+                modal.style.height = '500px'; 
+                modal.classList.remove('fixed'); 
+                fullScreenTabs.delete(modalIndex); 
+            }
 
             e.preventDefault(); // Prevents text selection while dragging
         });
@@ -265,8 +279,48 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             e.stopPropagation();
         });
-        
-
-        
     });
 });
+
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
