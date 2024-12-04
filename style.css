@@ -149,13 +149,15 @@ footer {
     height: 500px; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: transparent; /* Make background transparent */
-    pointer-events: none; /* Make background unclickable */
     transition: width 0.3s, height 0.3s; /* Smooth transition when toggling full-screen */
 }
 
 .modal-content {
     background-color: #fefefe; /* Background color of the modal */
     pointer-events: all; /* Make modal content clickable */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -192,10 +194,6 @@ footer {
     align-items: center; /* Center the buttons vertically */
     justify-content: flex-end; /* Push buttons to the right */
     margin-left: auto; /* Push the controls to the far right */
-}
-
-.modal-body {
-    padding: 20px; /* Padding inside the modal body */
 }
 
 .modal-footer {
@@ -289,13 +287,11 @@ img#buttonHover  {
 
 iframe {
     width: 100%;
-    height: 1200px;
+    height: 1050px;
     max-width: 870px; 
 }
 
 .modal-body#modal3 {
-    align-items: center;
-    align-content: center;
     display:flex;
     justify-content: center;
 }
@@ -341,4 +337,48 @@ iframe {
 
 #mydiv {
     position: absolute;
+}
+
+.modal-scroll-btn {
+    position: sticky; /* Change from fixed */
+    bottom: 20px;
+    float: right;
+    right: 20px;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    background: linear-gradient(rgb(0, 88, 238) 0%, rgb(53, 147, 255) 4%, rgb(40, 142, 255) 6%, rgb(18, 125, 255) 8%);
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: flex;  /* Add this */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;  /* Add some spacing */
+}
+
+/* Make sure the modal body can handle sticky positioning */
+.modal-body {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+}
+.modal-scroll-btn:hover {
+    background: linear-gradient(rgb(0, 64, 171) 0%, rgb(0, 82, 214) 50%, rgb(0, 98, 239) 100%);
+}
+
+.modal-scroll-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.modal-scroll-btn span {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.fa-arrow-up {
+    font-size: 28px; 
 }

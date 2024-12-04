@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
         clockElement.textContent = timeString;
     }
     
-    // setInterval(updateClock, 1000); // Update the clock every second
-    // updateClock(); // Initial call to set the clock immediately
+    setInterval(updateClock, 1000); // Update the clock every second
+    updateClock(); // Initial call to set the clock immediately
     const icons = document.querySelectorAll('.icon');
     const modals = document.querySelectorAll('.modal');
     const closeButtons = document.querySelectorAll('.close');
@@ -119,21 +119,29 @@ document.addEventListener('DOMContentLoaded', function() {
     fullScreenButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
             const modal = modals[index];
-            const content = modal.querySelector('.modal-content')
-
+            const modalContent = modal.querySelector('.modal-content');
+            const modalBody = modal.querySelector('.modal-body');
+            const taskbarHeight = document.querySelector('footer').offsetHeight;
+    
             if(fullScreenTabs.has(index)) {
+                // Regular size
                 modal.classList.remove('fullscreen');
                 modal.style.width = '60%';
-                modal.style.height = 'auto';
+                modal.style.height = '500px';
+                modalContent.style.height = '100%';
+                modalBody.style.height = 'auto';
                 modal.style.top = '50%';
                 modal.style.left = '50%';
                 modal.style.transform = 'translate(-50%, -50%)';
-                fullScreenTabs.remove(index); 
+                fullScreenTabs.delete(index); 
             }
             else {
+                // Fullscreen size
                 modal.classList.add('fullscreen');
                 modal.style.width = '100%';
-                modal.style.height = '100%';
+                modal.style.height = `calc(100vh - ${taskbarHeight}px)`;
+                modalContent.style.height = '100%';
+                modalBody.style.height = 'calc(100% - 30px)'; // Subtract header height
                 modal.style.top = '0';
                 modal.style.left = '0';
                 modal.style.transform = 'none';
@@ -142,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    
     // Restore modal when tab or icon is clicked
     function restoreModal(index) {
         const modal = modals[index];
@@ -280,7 +289,36 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
         });
     });
+
+    const modal2 = document.querySelector('#modal2');
+if (modal2) {
+    const modalBody = modal2.querySelector('.modal-body');
+    const scrollBtn = modal2.querySelector('.modal-scroll-btn');
+    const eatSafeSection = modal2.querySelector('#contents');
+
+    // Initially hide the button
+
+    // When user scrolls in modal
+    modalBody.addEventListener('scroll', function() {
+        // Show button after scrolling down 100px
+        if (modalBody.scrollTop > 100) {
+            scrollBtn.style.display = "flex";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    });
+
+    // Add click handler
+    scrollBtn.addEventListener('click', function() {
+        eatSafeSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+}
 });
+
+
 
 dragElement(document.getElementById("mydiv"));
 
@@ -323,4 +361,6 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+
+  
 }
