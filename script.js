@@ -295,7 +295,7 @@ if (modal2) {
     const modalBody = modal2.querySelector('.modal-body');
     const scrollBtn = modal2.querySelector('.modal-scroll-btn');
     const eatSafeSection = modal2.querySelector('#contents');
-
+    const topDiv = modal2.querySelector('.topDiv'); // Select the topDiv element within the modal
     // Initially hide the button
 
     // When user scrolls in modal
@@ -310,7 +310,7 @@ if (modal2) {
 
     // Add click handler
     scrollBtn.addEventListener('click', function() {
-        eatSafeSection.scrollIntoView({
+        topDiv.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         });

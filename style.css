@@ -186,6 +186,7 @@ footer {
     justify-content: space-between; /* Space between title and controls */
     background: linear-gradient(rgb(0, 88, 238) 0%, rgb(53, 147, 255) 4%, rgb(40, 142, 255) 6%, rgb(18, 125, 255) 8%, rgb(3, 111, 252) 10%, rgb(2, 98, 238) 14%, rgb(0, 87, 229) 20%, rgb(0, 84, 227) 24%, rgb(0, 85, 235) 56%, rgb(0, 91, 245) 66%, rgb(2, 106, 254) 76%, rgb(0, 98, 239) 86%, rgb(0, 82, 214) 92%, rgb(0, 64, 171) 94%, rgb(0, 48, 146) 100%); /* Header background color */
     color: white; /* Header text color */
+    padding: 5px; 
 }
 
 /* Align buttons to the right using flex-end */
@@ -194,6 +195,11 @@ footer {
     align-items: center; /* Center the buttons vertically */
     justify-content: flex-end; /* Push buttons to the right */
     margin-left: auto; /* Push the controls to the far right */
+}
+
+.modal-controls img {
+    height: 25px; 
+    width: auto; 
 }
 
 .modal-footer {
@@ -205,10 +211,7 @@ footer {
     text-align: right; /* Align the footer content to the right */
 }
 
-.modal-controls img {
-    height: 25px; 
-    width: auto; 
-}
+
 
 .modal-content p {
     padding: 10px 0px 10px 0px;
@@ -364,6 +367,16 @@ iframe {
     overflow: auto;
     padding: 20px;
 }
+
+.modal-body#modal2 {
+    flex: 1;
+    overflow: auto;
+    padding: 0px 20px 20px 20px;
+}
+
+.topDiv h1 {
+    padding-top: 20px; 
+}
 .modal-scroll-btn:hover {
     background: linear-gradient(rgb(0, 64, 171) 0%, rgb(0, 82, 214) 50%, rgb(0, 98, 239) 100%);
 }
@@ -381,4 +394,8 @@ iframe {
 
 .fa-arrow-up {
     font-size: 28px; 
+}
+
+.modal-controls img {
+    display: block;
 }
