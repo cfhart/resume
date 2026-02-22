@@ -267,7 +267,7 @@ img#buttonHover  {
     color: grey;
 }
 
-.rmfence .images img, .hemosonics .images img {
+.rmfence .images img, .hemosonics .images img, .lexisNexis .images img {
     width: 100%; 
     height: auto; 
 }

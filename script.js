@@ -279,9 +279,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         modal.addEventListener('click', (e) => {
             if (activeModal !== modal) {
-                // Only set the tab as active and bring the modal to the front if it's not minimized
                 if (modal.style.display === 'block') {
-                    setActiveTab(Array.from(modals).indexOf(modal));
+                    const modalIndex = Array.from(modals).indexOf(modal);
+                    const modalId = modal.id;
+                    
+                    setActiveTab(modalIndex);
+                    
+                    // Find the icon that links to this modal
+                    const matchingIcon = document.querySelector(`.icon[data-modal="${modalId}"]`);
+                    if (matchingIcon) {
+                        if (activeIcon) {
+                            activeIcon.classList.remove('active');
+                            activeIcon.querySelector('img').style.filter = '';
+                        }
+                        activeIcon = matchingIcon;
+                        activeIcon.classList.add('active');
+                        activeIcon.querySelector('img').style.filter = 'hue-rotate(360deg) saturate(2) brightness(0.6)';
+                    }
+                    
                     activeModal = modal;
                     bringToFront(activeModal);
                 }
