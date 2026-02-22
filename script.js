@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIcon = this;
     
             // Update active modal and bring it to the front
-            activeModal = modals[index];
-            bringToFront(activeModal);
+            const modalId = this.getAttribute('data-modal');
+            activeModal = document.getElementById(modalId);
     
             // Open the modal and bring it to the front
             if (activeModal) {

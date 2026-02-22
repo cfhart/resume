@@ -12,25 +12,25 @@
     <body>
         <section class="windowsBackground">
             <div class="icon-container">
-                <div class="icon">
+                <div class="icon" data-modal="modal1">
                     <img src="icons/desktopIcons/Internet Explorer 6.png" id="icon1">
                     <p>About Me</p>
                 </div>
-                <div class="icon">
-                    <img src="icons/desktopIcons/Email.png" id="icon2">
-                    <p>Projects</p>
-                </div>
-                <div class="icon">
+                 <div class="icon" data-modal="modal3">
                     <img src="icons/desktopIcons/Recycle Bin (full).png" id="icon3">
                     <p>Resume</p>
                 </div>
-                <div class="icon">
+                <div class="icon" data-modal="modal2">
+                    <img src="icons/desktopIcons/Email.png" id="icon2">
+                    <p>Class Projects</p>
+                </div>
+                <div class="icon" data-modal="modal5">
+                    <img src="icons/desktopIcons/My Computer.png" id="icon5">
+                    <p>Experience</p>
+                </div>
+                <div class="icon" data-modal="modal4">
                     <img src="icons/desktopIcons/Folder Closed.png" id="icon4">
                     <p>Relevant Courses</p>
-                </div>
-                <div class="icon">
-                    <img src="icons/desktopIcons/My Computer.png" id="icon5">
-                    <p>tbd</p>
                 </div>
             </div>
         </section>
@@ -61,8 +61,8 @@
                     <h1>About this website</h1>
                     <p> I decided to create this website to showcase what I couldn't fit in my resume. And as a CS major, whats better than a website?</p>
                     <p>This is an ongoing project, so there might be some small parts that don't behave as they should.</p>
-                    <p>What im currently working on: figuring out tbd section, can only close windows if not full screened, and finishing css styling, unfiltering when no windows open. But mainly: populating the design/projects page.</p>
-                    <p>If something messes up on the website, refresh.</p>
+                    <p>What im currently working on: Adding LexisNexis to experience, footer tabs not closing correctly, highlighted icons behavior (should highlight if active).</p>
+                    <p>If something starts behaving incorrectly, refresh.</p>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
         <div id="modal2" class="modal">
             <div class="modal-content">
                 <div class="modal-header" id="contents">
-                    <h2>Designs</h2>
+                    <h2>Classs Projects</h2>
                     <div class="modal-controls">
                         <span class="minimize" title="Minimize">
                             <img src="icons/desktopIcons/Minimize.png" alt="Minimize">
@@ -87,30 +87,27 @@
                 <div class="modal-body" id="modal2">
                         <div class="topDiv">
                             <h1>Projects</h1>
-
                         </div>
                         <ul>
                             <li><a href="#eatSafe">EatSafe</a></li>
-                            <li><a href="#rmfence">RM Fence LLC</a></li>
                             <li><a href="#miniProjects">MiniProjects</a></li>
                             <ul class="mpLow">
-                                <li><a href="#miniProjects">Mini Project 1: Static Websites</a></li>
-                                <li><a href="#miniProjects">Mini Project 2: Basic Calculator</a></li>
-                                <li><a href="#miniProjects">Mini Project 3: Pay Your Friends</a></li>
-                                <li><a href="#miniProjects">Mini Project 4: Howler</a></li>
-                                <li><a href="#miniProjects">Mini Project 5: Howler</a></li>
+                                <li><a href="#mini1">Mini Project 1: Static Websites</a></li>
+                                <li><a href="#mini2">Mini Project 2: Basic Calculator</a></li>
+                                <li><a href="#mini3">Mini Project 3: Pay Your Friends</a></li>
+                                <li><a href="#mini4">Mini Project 4: Howler</a></li>
+                                <li><a href="#mini5">Mini Project 5: Howler</a></li>
                             </ul>
-                            <li>Farmwood Figs</li>
                         </ul>
                         <div class="eatSafe" id="eatSafe">
                             <h1>EatSafe Progressive Web Application (PWA)</h1><br>
                             <div class="project">
                                 <div class="task">
+                                    <h4 class="date"><i>Duration: August - December 2024</i></h4> <br>
                                     <h3>Description</h3>
                                     <p>EatSafe is a Progressive Web Application designed to help users find restaurants in their area that accommodate various food allergies, dietary preferences, and restrictions. The app aims to provide a seamless experience for users seeking safe dining options that align with their specific needs.</p>
     
-                                    <h3>Main Features</h3>
-    
+                                    <h3>Main Features</h3> <br>
                                     <h4>Home Page</h4>
                                     <ul>
                                         <li>Displays a picture and logo</li>
@@ -220,102 +217,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="rmfence" id="rmfence">
-                            <div class="project">
-                                <div class="task">
-                                    <h3>Summer Project</h3>
-    
-                                    <h4>Fencing Company Website</h4>
-                                    <p>Developed a website for a local fencing company to showcase their installations and fences. The website highlights the company's services, displaying a gallery of completed projects, client testimonials, and details about the types of fences they offer. The goal was to create an informative and visually appealing site to attract new customers.</p>
-    
-                                    <h4>Main Features</h4>
-                                    <h5>Homepage</h5>
-                                    <ul>
-                                        <li>Introduces the company with a brief overview of services.</li>
-                                        <li>Displays a gallery of fence installations with images and descriptions.</li>
-                                        <li>Provides contact information and links to social media accounts.</li>
-                                    </ul>
-    
-                                    <h5>Gallery Page</h5>
-                                    <ul>
-                                        <li>Shows high-quality images of various fence installations completed by the company.</li>
-                                        <li>Allows visitors to view different types of fences (e.g., wooden, iron, vinyl). </li>
-                                    </ul>
-    
-                                    <h5>Contact Page</h5>
-                                    <ul>
-                                        <li>Includes a form for customers to request quotes or ask for more information.</li>
-                                        <li>Displays the company's phone number, email, and address for easy communication.</li>
-                                    </ul>
-    
-                                    <h4>Technologies Used</h4>
-                                    <ul>
-                                        <li>HTML, CSS, and JavaScript for front-end development.</li>
-                                        <li>Responsive design for mobile and desktop compatibility.</li>
-                                        <li>Used a simple content management approach for easy updates to gallery and contact information.</li>
-                                    </ul>
-    
-                                    <h4>Challenges & Solutions</h4>
-                                    <ul>
-                                        <li>Ensuring mobile responsiveness across different devices was a priority, requiring adjustments to layout and image sizes.</li>
-                                        <li>Provided clear instructions for the client to update gallery images, making future maintenance simple for non-technical users.</li>
-                                    </ul>
-    
-                                </div>
-                                <div class="images">
-                                    <div class="image">
-                                        <p><b>Home:</b></p>
-                                        <img src="./media/rmfence/home.jpg">
-                                    </div>
-                                    <div class="image">
-                                        <p><b>Example of fence section:</b></p>
-                                        <img src="./media/rmfence/aluminum.jpg" style="width: 700px; height: auto;">
-                                    </div>
-                                    
-                                    <div class="image">
-                                        <p><b>Contact:</b></p>
-                                        <img src="./media/rmfence/contact.jpg" style="width: 700px; height: auto;">
-                                    </div>
-                                    <div class="image">
-                                        <p><b>Portfolio:</b></p>
-                                        <img src="./media/rmfence/portfolio.jpg" style="width: 700px; height: auto;">
-                                    </div>
-                                    <div class="image">
-                                        <p><b>Services:</b></p>
-                                        <img src="./media/rmfence/services.jpg" style="width: 700px; height: auto;">
-                                    </div>
-                                    <div class="image">
-                                        <p><b>Footer:</b></p>
-                                        <img src="./media/rmfence/footer.jpg" style="width: 700px; height: auto;">
-                                    </div>
-                                    <div class="mobile">
-                                        <div class="image">
-                                            <p><b>Form:</b></p>
-                                            <img src="./media/rmfence/form.jpg" style="width: 300px; height: auto;">
-                                        </div>
-                                        <div class="image">
-                                            <p><b>Mobile view:</b></p>
-                                            <img src="./media/rmfence/mobile.jpg" style="width: 300px; height: auto;">
-                                        </div>
-                                        <div class="image">
-                                            <p><b>Mobile nav menu:</b></p>
-                                            <img src="./media/rmfence/nav.jpg" style="width: 300px; height: auto;">
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="video">
-                                    <p><b>Video:</b></p>
-                                    <video width="100%" height="auto" controls>
-                                        <source src="./media/rmfence/demo.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="miniProjects" id="miniProjects">
                             <h1>Mini Projects</h1><br>
-                            <h2>Mini Project 1: Static Websites</h2>
-                            <div class="mp1">
+                            <h4 class="date"><i>Duration: August - December 2024</i></h4> <br>
+                            <div class="mp1" id="mini1">
+                                <h2 >Mini Project 1: Static Websites</h2>
                                 <div class="project">
                                     <div class="task">
                                         <p><b>Task 1:</b> Create a static landing page for a hypothetical (but professional) newspaper's website with a focus on layout and composition</p>
@@ -374,8 +281,8 @@
                                 </div>
                                 
                             </div>
-                            <div class="mp2">
-                                <h2>Mini Project 2: Basic Calculator</h2>
+                            <div class="mp2" id="mini2">
+                                <h2 >Mini Project 2: Basic Calculator</h2>
                                 <div class="project">
                                     <div class="task">
                                         <p><b>Task 1:</b> Develop a web-based calculator with computation history</p>
@@ -441,8 +348,8 @@
                                 </div>
                                 
                             </div>
-                            <div class="mp3">
-                                <h2>Mini Project 3: Pay Your Friends</h2>
+                            <div class="mp3" id="mini3">
+                                <h2 >Mini Project 3: Pay Your Friends</h2>
     
                                 <div class="project">
                                     <div class="task">
@@ -512,13 +419,16 @@
                                         </video>
                                     </div>
                                     <div class="notes">
-                                        <li><b>Validation:</b> Ensure data integrity on the server side.</li>
-                                        <li><b>Fraud Prevention:</b> Block payments to "Stuart Dent" or "Stu Dent" (display error page if detected).</li>
-                                        <li>Store uploaded images in an uploads/ folder.</li>
+                                        <ul>
+                                            <li><b>Validation:</b> Ensure data integrity on the server side.</li>
+                                            <li><b>Fraud Prevention:</b> Block payments to "Stuart Dent" or "Stu Dent" (display error page if detected).</li>
+                                            <li>Store uploaded images in an uploads/ folder.</li>
+                                        </ul>
+                                        
                                     </div>
                                 </div>
                             </div>
-                            <div class="mp4">
+                            <div class="mp4" id="mini4">
                                 <h2>Mini Project 4: Howler</h2>
                                 <div class="project">
                                     <div class="task">
@@ -569,11 +479,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    
     
-                                    <div class="images">
-    
-                                    </div>
                                     <div class="video">
                                         <p><b>Video:</b></p>
                                         <p>mp4 is an unfinished version of mp5, so its better to look at mp5's video. Only difference is password with login and clicking on any username links to that user's profile.</p>
@@ -583,18 +489,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mp5">
+                            
+                            <div class="mp5" id="mini5">
                                 <h2>Mini Project 5: Howler</h2>
                                 <div class="project">
                                     <div class="task">
-                                        
+                                        <p><b>Description:</b>Continuation of Mini Project 4</p>
                                     </div>
-                                    
-    
-                                    <div class="images">
-    
-                                    </div>
-    
+
                                     <div class="video">
                                         <p><b>Video:</b></p>
                                         <video width="100%" height="auto" controls>
@@ -673,20 +575,238 @@
                             <li>Applied web based server side computing</li>
                             <li>Foundation of Graphics</li>
                             <li>AI Powered Robotics</li>
+                            <li>Software Engineering</li>
+                            <li>Introduction to Responsible Machine Learning</li>
+                            <li>Visual Thinking</li>
+                            <li>Senior Design Project</li>
+                            <li>Computer Graphics</li>
+                            <li>3d Spatial Relations</li>
+                            <li>Sea Kyaking</li>
                         </ul>
                     </div>
                     <div class="list">
                         <h2>Current</h2>
                         <ul>
-                            <li>Software Engineering</li>
-                            <li>Introduction to Responsible Machine Learning</li>
-                            <li>Visual Thinking</li>
+                            <li>Python Applications</li>
+                            <li>Ethics in Computing</li>
+                            <li>How to be a Software Guru</li>
+                            <li>Desktop Publishing and Imaging Technology</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Experience</h2>
+                    <div class="modal-controls">
+                        <span class="minimize" title="Minimize">
+                            <img src="icons/desktopIcons/Minimize.png" alt="Minimize">
+                        </span>
+                        <span class="full-screen" title="Full Screen">
+                            <img src="icons/desktopIcons/Maximize.png" alt="Full Screen">
+                        </span>
+                        <span class="close" title="Close">
+                            <img src="icons/desktopIcons/Exit.png" alt="Close">
+                        </span>
+                    </div>
+                </div>
+                <div class="modal-body" id="modal5">
+                    <div class="topDiv">
+                            <h1>Experience</h1>
+                        </div>
+                        <ul>
+                            <li><a href="#lexisNexis">LexisNexis: Team Management System</a></li>
+                            <li><a href="#hemosonics">Hemosonics: System Test Results</a></li>
+                            <li><a href="#rmfence">RM Fence LLC: Fencing Company Website</a></li>
+                        </ul>
+                        <div class="lexisNexis" id="lexisNexis">
+                            <h1>LexisNexis: Team Management System</h1> <br>
+                            <h4 class="date"><i>Duration: August - December 2025</i></h4> <br>
+                            <div class="experience">
+                                <div class="task">
+                                    <h3>Description</h3>
+                                    <p>Building an intuitive resource management tool to track and allocate personnel and teams across 300+ projects.</p>
+                                </div>
+                            </div>
+
+                            <p>More details coming soon!</p>
+                        </div>
+
+                        <div class="hemosonics" id="hemosonics">
+                            <h1>Hemosonics: System Test Results</h1> <br>
+                            <h4 class="date"><i>Duration: May - August 2025</i></h4> <br>
+                            <div class="project">
+                                <div class="task">
+                                    <h3>My Role</h3>
+                                    <p>As the R&D Software Engineering intern I independently architectured an end-to-end, scalable test system that automated capturing and recording of system test results.</p>
+                                    
+                                    <h3>Description</h3>
+                                    <p>The application is a full-stack test management system that integrates automated test execution with the Jama Connect requirements platform. It handles attachments (including translated/localized screenshots), and the synchronization of these results with Jama via its REST API.</p>
+                                    
+                                    <h3>Tech Stack</h3> <br>
+                                    <h4>Frontend</h4>
+                                    <ul>
+                                        <li>Blazor</li>
+                                        <li>ASP.NET Core</li>
+                                        <li>C#</li>
+                                    </ul>
+
+                                    <h4>Backend</h4>
+                                        <ul>
+                                            <li>.NET Core</li>
+                                            <li>C#</li>
+                                            <li>Minimal APIs</li>
+                                        </ul>
+
+                                    <h4>Database</h4>
+                                        <ul>
+                                            <li>MySQL</li>
+                                            <li>Entity Framework Core</li>
+                                        </ul>
+
+                                    <h4>Testing</h4>
+                                        <ul>
+                                            <li>xUnit</li>
+                                            <li>MSTest</li>
+                                        </ul>
+                                    
+                                    <h3>Main Features</h3> <br>
+                                    <h4>Search / Home Page</h4> <br>
+                                    <div class="images">
+                                        <div class="image">
+                                            <img src="./media/hemosonics/3Test.png">
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>Home page for system test management</li>
+                                        <li>Allows users to search for Test Runs by Cycle Id</li>
+                                        <li>Displays application name and company logo</li>
+                                    </ul>
+                                    <h4>Test Runs (Search result) Page</h4> <br>
+                                    <div class="images">
+                                        <div class="image">
+                                            <img src="./media/hemosonics/1Test.png">
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>Shows result of the Search Page</li>
+                                        <li>Columns include Test Run ID, name, language, serial number / machine name, status, and actions</li>
+                                        <li>Users can assign serial numbers / machine names</li>
+                                        <li>Options to save changes, view details, or reset each test run</li>
+                                    </ul>
+                                    <h4>Test Run Detail Page</h4> <br>
+                                    <div class="images">
+                                        <div class="image">
+                                            <img src="./media/hemosonics/2Test.png">
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>Displays detailed information for a selected test run</li>
+                                        <li>Includes all columns from the Test Runs page plus current step and attachment previews</li>
+                                        <li>Allows pausing, skipping, or resuming steps</li>
+                                    </ul>
+                                    <p><i>Every page handles and displays success, error, and informational responses for all API operations</i></p><br>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rmfence" id="rmfence">
+                            <h1>RM Fence LLC: Company Website</h1> <br>
+                            <div class="experience">
+                                <div class="task">
+                                    <h3>Description</h3>
+                                    <p>Developed a website for a local fencing company to showcase their installations and fences. The website highlights the company's services, displaying a gallery of completed projects, client testimonials, and details about the types of fences they offer. The goal was to create an informative and visually appealing site to attract new customers.</p>
+    
+                                    <h3>Main Features</h3> <br>
+                                    <h4>Homepage</h4>
+                                    <ul>
+                                        <li>Introduces the company with a brief overview of services.</li>
+                                        <li>Displays a gallery of fence installations with images and descriptions.</li>
+                                        <li>Provides contact information and links to social media accounts.</li>
+                                    </ul>
+    
+                                    <h4>Gallery Page</h4>
+                                    <ul>
+                                        <li>Shows high-quality images of various fence installations completed by the company.</li>
+                                        <li>Allows visitors to view different types of fences (e.g., wooden, iron, vinyl). </li>
+                                    </ul>
+    
+                                    <h4>Contact Page</h4>
+                                    <ul>
+                                        <li>Includes a form for customers to request quotes or ask for more information.</li>
+                                        <li>Displays the company's phone number, email, and address for easy communication.</li>
+                                    </ul>
+    
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>HTML, CSS, and JavaScript for front-end development.</li>
+                                        <li>Responsive design for mobile and desktop compatibility.</li>
+                                        <li>Used a simple content management approach for easy updates to gallery and contact information.</li>
+                                    </ul>
+    
+                                    <h3>Challenges & Solutions</h3>
+                                    <ul>
+                                        <li>Ensuring mobile responsiveness across different devices was a priority, requiring adjustments to layout and image sizes.</li>
+                                        <li>Provided clear instructions for the client to update gallery images, making future maintenance simple for non-technical users.</li>
+                                    </ul>
+    
+                                </div>
+                                <div class="images">
+                                    <div class="image">
+                                        <p><b>Home:</b></p>
+                                        <img src="./media/rmfence/home.jpg">
+                                    </div>
+                                    <div class="image">
+                                        <p><b>Example of fence section:</b></p>
+                                        <img src="./media/rmfence/aluminum.jpg" style="width: 700px; height: auto;">
+                                    </div>
+                                    
+                                    <div class="image">
+                                        <p><b>Contact:</b></p>
+                                        <img src="./media/rmfence/contact.jpg" style="width: 700px; height: auto;">
+                                    </div>
+                                    <div class="image">
+                                        <p><b>Portfolio:</b></p>
+                                        <img src="./media/rmfence/portfolio.jpg" style="width: 700px; height: auto;">
+                                    </div>
+                                    <div class="image">
+                                        <p><b>Services:</b></p>
+                                        <img src="./media/rmfence/services.jpg" style="width: 700px; height: auto;">
+                                    </div>
+                                    <div class="image">
+                                        <p><b>Footer:</b></p>
+                                        <img src="./media/rmfence/footer.jpg" style="width: 700px; height: auto;">
+                                    </div>
+                                    <div class="mobile">
+                                        <div class="image">
+                                            <p><b>Form:</b></p>
+                                            <img src="./media/rmfence/form.jpg" style="width: 300px; height: auto;">
+                                        </div>
+                                        <div class="image">
+                                            <p><b>Mobile view:</b></p>
+                                            <img src="./media/rmfence/mobile.jpg" style="width: 300px; height: auto;">
+                                        </div>
+                                        <div class="image">
+                                            <p><b>Mobile nav menu:</b></p>
+                                            <img src="./media/rmfence/nav.jpg" style="width: 300px; height: auto;">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="video">
+                                    <p><b>Video:</b></p>
+                                    <video width="100%" height="auto" controls>
+                                        <source src="./media/rmfence/demo.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
 
         <div id="mydiv" class="modal">
             <div class="modal-content">

@@ -263,7 +263,11 @@ img#buttonHover  {
     flex-wrap: wrap; 
 }
 
-.rmfence .images img {
+.date {
+    color: grey;
+}
+
+.rmfence .images img, .hemosonics .images img {
     width: 100%; 
     height: auto; 
 }
@@ -368,7 +372,7 @@ iframe {
     padding: 20px;
 }
 
-.modal-body#modal2 {
+.modal-body#modal2, .modal-body#modal5{
     flex: 1;
     overflow: auto;
     padding: 0px 20px 20px 20px;
